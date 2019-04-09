@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>the CUBE</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/memo.css">
+    <link rel="stylesheet" href="css/random.css">
+    <link rel="stylesheet" href="css/randombgs.css">
+    <link rel="stylesheet" href="css/cc.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <link rel="shortcut icon" href="">
+</head>
+
+<body>
+
+    <nav id="nav" class="nav nav-hidden">
+        <ul id="nav-list">
+            <li>
+                <button id="front" value="1">Front Wall</button>
+            </li>
+            <li>
+                <button id="back" value="2">MeMo</button>
+            </li>
+            <li>
+                <button id="left" value="3">Currency Converter</button>
+            </li>
+            <li>
+                <button id="right" value="4">Dice Roller</button>
+            </li>
+            <li>
+                <button id="top" value="5">"The Map"</button>
+            </li>
+            <li>
+                <button id="bottom" value="6">Game</button>
+            </li>
+            <li>
+                <button id="backface" value="7">Backface Visibility</button>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main" class="main">
+        <div id="cube" class="cube">
+            <div class="wall front wall-backface">
+                <div id="title-container" class="title-container">
+                    <div id="title-move" class="title-moving">
+                        <h1 class="title-header">the CUBE</h1>
+                        <button id="title-button" class="title-button">MOAR!!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wall back wall-backface">
+                <div class="memo-container">
+                    <h2 class="memo-header">In Memory of Web Developer</h2>
+                    <section class="memo-scores">
+                        <ul class="memo-stars">
+                            <li>
+                                <i class="far fas fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="far fas fa-star"></i>
+                            </li>
+                            <li>
+                                <i class="far fas fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="memo-para">
+                            Moves:
+                            <span id="memo-moves">0</span>
+                        </p>
+                        <p class="memo-para">
+                            Time:
+                            <span id="memo-timer">00:00</span>
+                        </p>
+                        <span id="memo-restart" class="fas fa-undo restart"></span>
+                    </section>
+                    <ul class="memo-board">
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-css3"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-html5"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-js-square"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-git"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-sass"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-react"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-node"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-grunt"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-css3"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-html5"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-js-square"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-git"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-sass"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-react"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-node"></span>
+                        </li>
+                        <li class="memo-card">
+                            <span class="memo-front far fa-question-circle"></span>
+                            <span class="memo-back fab fa-grunt"></span>
+                        </li>
+                    </ul>
+                    <div id="memo-grats" class="memo-grats-div memo-hidden">
+                        <h2 class="memo-header">Congratulations!!</h2>
+                        <p class="memo-para">Cleared in
+                            <span id="memo-clear-time"></span>
+                            with
+                            <span id="memo-stars-score"></span>
+                            star(s)!!
+                        </p>
+                        <div id="memo-again" class="memo-again-button">Play again!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="wall left wall-backface">
+                <div class="cc-container">
+                    <h2 class="cc-header">Currency Converter</h2>
+                    <div class="cc-inputs-container">
+                        <input id="cc-main-input" class="cc-input" type="number" step="0.01" min="0" value="0"
+                            placeholder="i have">
+                        <select id="cc-select-from" class="cc-select">
+                        </select>
+                        <img class="cc-arrow" src="/img/redarrow.png">
+                        <p id="cc-result" class="cc-output"></p>
+                        <select id="cc-select-to" class="cc-select">
+                        </select>
+                    </div>
+                    <div class="cc-info">
+                        <div class="cc-currency-info">
+                            <p id="cc-one" class="cc-info-text"></p>
+                            <p id="cc-base" class="cc-info-text"></p>
+                        </div>
+                        <p id="cc-loaded" class="cc-info-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="wall right flex wall-backface">
+                <div id="rand-container">
+                    <h2 id="rand-title" class="rand-titlebackgrd">Dice Roller</h2>
+                    <div id="rand-dices" class="rand-dices">
+                        <button id="rand-coin" class="rand-dice rand-d2backgrd" value="1">Coin</button>
+                        <button id="rand-d4" class="rand-dice rand-d4backgrd" value="4">d4</button>
+                        <button id="rand-d6" class="rand-dice rand-d6backgrd" value="6">d6</button>
+                        <button id="rand-d8" class="rand-dice rand-d8backgrd" value="8">d8</button>
+                        <button id="rand-d10" class="rand-dice rand-d10backgrd" value="10">d10</button>
+                        <button id="rand-d12" class="rand-dice rand-d12backgrd" value="12">d12</button>
+                        <button id="rand-d20" class="rand-dice rand-d20backgrd" value="20">d20</button>
+                        <button id="rand-d100" class="rand-dice rand-d100backgrd" value="100">d100</button>
+                    </div>
+                    <div class="rand-buttons">
+                        <button id="rand-roll-button" type="button" class="rand-button rand-inactive-button" disabled>Roll</button>
+                        <button id="rand-clear-sel" type="button" class="rand-button rand-inactive-button" disabled>Clear</button>
+                    </div>
+                    <div id="rand-selected" class="rand-dices rand-selected">
+                        Choose your destiny...
+                        <div id="rand-coin-container" class="rand-coin-container rand-coin-container-hidden">
+                            <img class="rand-coin-face rand-coin-heads" src="/img/coin_good.png" alt="heads">
+                            <img class="rand-coin-face rand-coin-tails" src="/img/coin_bad.png" alt="tails">
+                        </div>
+                    </div>
+                    <p id="rand-total">Death or glory</p>
+                    <div id="rand-log" class="rand-buttons">
+                        <button id="rand-show-history" type="button" class="rand-button rand-inactive-button" disabled>History</button>
+                        <button id="rand-clear-all" type="button" class="rand-button rand-inactive-button" disabled>Clear
+                            all</button>
+                    </div>
+                    <div id="rand-history" class="rand-history rand-history-hidden">
+                        <div id="rand-rolls-history"></div>
+                        <button id="rand-close-history" class="rand-button">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wall top wall-backface">
+                <div id="map" class="map-container"></div>
+            </div>
+            <div class="wall bottom wall-backface">
+                <canvas tabIndex="0" id="canvas" class="game-canvas" width="800" height="800"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=GoogleMapsAPIkey&callback=initMap">
+    </script>
+    <script src="js/map.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shootem.js"></script>
+    <script src="js/memo.js"></script>
+    <script src="js/random.js"></script>
+    <script src="js/cc.js"></script>
+</body>
+
+</html>

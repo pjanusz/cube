@@ -1,0 +1,200 @@
+.memo-container {
+    font-family: 'IBM Plex Mono';
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(36, 88, 239, .5);
+}
+
+.memo-header {
+    text-align: center;
+    width: 100%;
+    font-size: 28px;
+}
+
+.memo-scores {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.memo-stars {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.memo-stars li {
+    margin: 0 10px 0 10px;
+}
+
+.memo-stars li i {
+    height: 100%;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.memo-para {
+    margin: 0;
+    height: 100%;
+    line-height: 30px;
+    font-size: 22px;
+}
+
+#memo-restart {
+    width: 50px;
+    height: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+#memo-restart:hover {
+    color: red;
+}
+
+#memo-restart:active {
+    transform: rotateZ(-360deg);
+}
+
+.memo-board {
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+    background-image: linear-gradient(45deg, rgba(157, 89, 214, .5), rgba(86, 86, 252, .5));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.75);
+    perspective: 1000px;
+}
+
+.memo-card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 10px 0 10px 0;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    background-color: #2458ef;
+    border: 1px solid #3490ff;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.memo-card span {
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    font-size: 100px;
+    /* line height + .card height = vertical center */
+    line-height: 145px;
+    visibility: inherit;
+}
+
+.memo-back {
+    transform: rotateY(180deg);
+}
+
+.memo-front {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.memo-show {
+    transform: rotateY(180deg);
+}
+
+.memo-animation-off {
+    transition: none;
+    transform: none;
+    cursor: not-allowed;
+}
+
+.memo-lock {
+    box-shadow: 0 0 20px 10px green;
+}
+
+.memo-grats-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 23%;
+    left: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(36, 88, 239, .9);
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid #3490ff;
+    box-shadow: 0 0 30px 5px #fff;
+    box-sizing: border-box;
+    animation: fadeIn .5s;
+}
+
+.memo-grats-div h2 {
+    margin: 0;
+    font-size: 45px;
+}
+
+.memo-grats-div p {
+    width: 100%;
+    height: 100px;
+}
+
+.memo-again-button {
+    padding: 0 10px 0 15px;
+    box-sizing: border-box;
+    width: auto;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 60px;
+    margin: 0 auto 0 auto;
+}
+
+.memo-again-button:hover {
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 0 0 30px 5px #fff;
+}
+
+.memo-hidden {
+    display: none;
+}
+
+/* fadeIn for congratulations div (grats-div)*/
+
+@keyframes fadeIn {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: flex;
+        opacity: 0;
+    }
+    100% {
+        display: flex;
+        opacity: 1;
+    }
+}
